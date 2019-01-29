@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>UNICCAN</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/PageStyle.css">     
+    </head>
+    <body>        
+        <div class="topbar">
+            <ul>
+                <li><a href="https://www.facebook.com/uniccan/" target="blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" target="blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/be.uniccan/" target="blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#" target="blank"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="imglogo">
+            <div class="divlogoimg" style="display:block;">
+                <img src="image\image.png">
+            </div>
+            <div class="logo">
+                    <b>U<span style="color:green;">NIC</span>CAN</b>
+            </div>
+        </div>
+        <div class="contentSection">
+            <img src="image\image.png">
+        </div>
+        <div class="hero">
+            <div class="button">
+                <a href="learn.html" class="btn btn-one">Learn</a>
+                <a href="" class="btn btn-two">Guide</a>
+                <a href="" class="btn btn-three">+</a>
+            </div>
+        </div>
+        <div>
+            <div class="menu-toggle" style="display:none;"></div>
+            <nav class="navbar navbar-default navbar-fixed-bottom menubottom">
+                <ul>
+                    <li><a href="about.html?menu=about">About Us</a></li>
+                    <li><a href="about.html?menu=vision">Vision</a></li>
+                    <li><a href="about.html?menu=career">Careers</a></li>
+                    <li><a href="about.html?menu=contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>    
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menu-toggle').click(function(){
+                $('.menu-toggle').toggleClass('active');
+                $('nav').toggleClass('active');
+            })
+        })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>UNICCAN</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+            <script src="jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+            <link rel="stylesheet" href="css/about.css">
+    </head>
+
+    <body>
+        <div class="imglogo"> 
+            <div class="socialicon">
+              <ul>
+                <li><a href="https://www.facebook.com/uniccan/" target="blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" target="blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/be.uniccan/" target="blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#" target="blank"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>           
+            <div class="divlogoimg" style="display:block;">
+                <img class="imglogoimg" src="image\image.png">
+            </div>
+            <div class="logo">
+                    <b>U<span style="color:green;">NIC</span>CAN</b>
+            </div>
+        </div>
+        <div>
+            <div class="menu-toggle" style="display:none;"></div>
+            <nav class="navbar navbar-default navbar-fixed-bottom menubottom">
+                <ul>
+                    <li class="about"><a href="#about">About Us</a></li>
+                    <li class="vision"><a href="#vision">Vision</a></li>
+                    <li class="career"><a href="#career">Careers</a></li>
+                    <li class="contact"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container-fluid contentSection">
+            <div class="insidecontent">
+                <div id="about" class="divcontent">
+                    <h1>About Us</h1>
+                    <p id="first">Uniccan is an initiative to conserve and preserve antique, traditional skills by making it more accessible 
+                    and also making it to give a real experience and feel of the skill to the people. Not just antique and traditional skills, 
+                    even many informal skills and also some professional skills which remains in a distance from people.
+                    We intend take these skills to further more levels and giving them a wider reach.
+                    </p>
+                </div>
+
+                <div id="vision" class="divcontent" style="display: none;">
+                    <h1>Vision Behind</h1>
+                    <p id="second">
+                        This modern age provides us with a lot of skills but out of that only a few professional skills were recognized and promoted but still we are left with many unique,
+                        informal and useful skills which remains untouched.
+                    <p><strong>Let’s recognize and bring it up to the whole world !</strong> </p>
+                        We are here to take it up these skills to the interested people and by doing so every skill will fulfil its due and purpose of its creation.
+                    </p>
+                </div>
+
+                <div id="career" class="divcontent" style="display: none;">
+                    <h1>Career With Us</h1>
+                    <p id="third">
+                        We are always open for new ideas, skills and work. If you are passionate to work with us, ping us on our mail
+                        <p><span class="glyphicon glyphicon-envelope"> <strong>work@uniccan.com</strong></span></p>
+                        As of now, we are looking for
+                        <p> Website developer with expertise on back end</p>
+                    </p>
+                </div>
+
+                <div id="contact" class="divcontent" style="display: none;">
+                    <h1>Contact Us</h1>
+                    <p>Phone : 8248666283 / 9080566549</p>
+                    <p>Mail : sales@uniccan.com</p>
+                </div>
+            </div>
+         </div>
+         <script type="text/javascript">
+            $(document).ready(function(){
+                $('.menu-toggle').click(function(){
+                    $('.menu-toggle').toggleClass('active');
+                    $('nav').toggleClass('active');
+                })
+                var urlParams = new URLSearchParams(window.location.search);
+                var urlmenu = urlParams.get('menu'); 
+                $(".divcontent").css("display","none");   
+                $("#"+urlmenu).css("display","block");
+                $("ul").find("."+urlmenu).addClass("active");
+
+                $(".navbar ul li").click(function(){
+                    $(".divcontent").css("display","none");
+                    $(".navbar ul li").removeClass("active");
+                    $(this).addClass("active");
+                    var aid = $(this).find("a").attr("href");
+                    $(aid).css("display","block");
+                });
+                $(".divlogoimg,.divlogoimg img").click(function(){
+                    window.location.href="Home.html";
+                });
+            })
+            </script>
+    </body>
+</html>
